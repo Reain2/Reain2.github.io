@@ -136,7 +136,7 @@ Rules for content are in DESIGN.md §9. Every published claim must trace to an o
 | OQ-002 | Blog authoring: Markdown, JS/JSON data, or external platform? How many posts at launch? | FR-006, FR-007, ADR-008 |
 | OQ-003 | ~~Typography: which typefaces, and how are they hosted?~~ **Resolved** — Space Grotesk, self-hosted. Owner may override. | — |
 | OQ-004 | Résumé: file format, who supplies it, where it lives, how it is updated? | FR-005 |
-| OQ-005 | GitHub username, repository name and account plan. | base path, deploy |
+| OQ-005 | ~~GitHub username, repository name and account plan.~~ **Resolved** — `Reain2`, repo `Reain2.github.io`, free plan. | — |
 | OQ-006 | All personal content (CR-001 to CR-016). | Phases 2–4 |
 | OQ-007 | Supported browsers and devices (proposal in NFR-010). | verification |
 | OQ-008 | Site name, tagline, favicon, social preview image. | FR-012, home |
@@ -158,5 +158,7 @@ Rules for content are in DESIGN.md §9. Every published claim must trace to an o
 | Performance | Optimize for low LCP; the numeric thresholds in NFR-003 are proposed | 2026-11-06 |
 | Typography | "Minimalist but attention-holding" — Space Grotesk chosen under that instruction | 2026-11-06 |
 | Content at build | Placeholders only; no personal content yet | 2026-11-06 |
+| GitHub account | `Reain2`, repository `Reain2.github.io`, public, free plan | 2026-11-07 |
+| Deploy | GitHub Actions approved — "atur semuanya" | 2026-11-07 |
 
 Everything else in this document is not yet decided.

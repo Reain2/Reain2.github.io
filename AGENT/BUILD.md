@@ -42,8 +42,8 @@ Cost accepted: full page load between pages; no client-side transitions.
 | Styling | Plain CSS with custom properties | Accepted |
 | Router | None | Accepted |
 | UI components | Free ReactBits, used sparingly | Accepted with limits (ADR-006) |
-| Hosting | GitHub Pages, free github.io domain | Accepted |
-| CI/CD | GitHub Actions | Proposed — one-line approval needed (ADR-004) |
+| Hosting | GitHub Pages, free github.io domain — `https://reain2.github.io` | Accepted |
+| CI/CD | GitHub Actions | Accepted 2026-11-07 — live |
 | Content | JS modules in `src/content/` | Accepted |
 | Rendering | Build-time prerender of every page, then hydrate | Accepted |
 | Typeface | Space Grotesk variable, latin subset, self-hosted | Accepted |
@@ -124,7 +124,7 @@ export default defineConfig({
 
 Rules:
 
-- `base` comes from the repository form, not from a hard-coded string: `<username>.github.io` uses `/`, any other repository uses `/<repo>/`.
+- `base` comes from the repository form, not from a hard-coded string: `<username>.github.io` uses `/`, any other repository uses `/<repo>/`. This project uses the user-site form, so `base` is `/` and `VITE_BASE` is left unset.
 - Asset references in code use `import.meta.env.BASE_URL`, never a leading-slash literal. This is the only correct mechanism; there is no other Vite API for it.
 - `build.sourcemap` stays `false` (default).
 - `rollupOptions.input` is correct for the installed Vite 8.3.6; a rename to `rolldownOptions` was not needed, but re-check on a major upgrade.
@@ -233,6 +233,8 @@ GitHub Pages, static artifacts, free github.io domain, no custom domain.
 |---|---|
 | Publishing source | GitHub Actions |
 | Environment | `github-pages` |
+| Repository | `Reain2/Reain2.github.io` (user site, base `/`) |
+| Live URL | `https://reain2.github.io/` |
 | Node | pinned LTS, cached |
 | Install | `npm ci` from the lockfile |
 | Build | `npm run build` (client build + SSR prerender + markup injection) |
@@ -242,7 +244,7 @@ GitHub Pages, static artifacts, free github.io domain, no custom domain.
 
 Workflow shape: checkout → setup-node with cache → `npm ci` → `npm run build` → `npm run check:sizes` → configure-pages → upload-pages-artifact → deploy-pages. Lint is not part of the deploy until ESLint is installed (TODO T1-06). The placeholder check is a release gate run by the owner, not by CI, because placeholders are expected until OQ-006 is answered. Pin action majors and re-check current versions when writing the file; do not copy versions from this document.
 
-**ADR-004 is still unapproved.** Deployment work is blocked until the owner confirms GitHub Actions in one line. The alternative is branch publishing, which is not designed for a Vite build.
+Deployment is live. The first deploy exposed one trap: when a repository already has Pages enabled in `legacy` mode, the branch build runs alongside the Actions deploy and can publish the raw source tree (`/src/entries/home.jsx`) over the built artifact. `build_type` must be `workflow` (`gh api --method PUT /repos/{owner}/{repo}/pages -f build_type=workflow`), and the solution was to re-run the deploy workflow afterwards.
 
 ### Rollback
 
@@ -302,9 +304,10 @@ What `ci.yml` deliberately does not do yet: lint (no ESLint installed) and the p
 - **Alternatives:** other static hosts; not pursued.
 
 ### ADR-004 — Deployment through GitHub Actions
-- **Status:** **Proposed — needs one-line owner approval**
-- **Why:** the repository publishes a build artifact, which branch publishing does not handle well.
-- **Alternative:** publish from a branch.
+- **Status:** Accepted (2026-11-07), deployed
+- **Decision:** `.github/workflows/deploy.yml` builds with `npm run build`, checks sizes, uploads `dist/`, and deploys through `actions/deploy-pages`.
+- **Why:** the repository publishes a build artifact, which branch publishing does not handle well. Branch publishing also serves the source tree, which this site showed directly.
+- **Alternative:** publish from a branch — rejected after it published raw `/src` files.
 
 ### ADR-005 — No backend; contact via `mailto:`
 - **Status:** Accepted

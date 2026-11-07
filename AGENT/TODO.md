@@ -16,9 +16,9 @@ Rules:
 
 ## Phase 0 — Decisions and intake
 
-- [ ] **T0-01 — GitHub details** (OQ-005)
-  - Username, repository name, account plan. Public repository is required on GitHub Free.
-  - Done when: values recorded in BUILD.md §5 and §13.
+- [x] **T0-01 — GitHub details** (OQ-005)
+  - `Reain2`, repository `Reain2.github.io`, public, free plan. User-site form, so base is `/`.
+  - Done when: values recorded in BUILD.md §5 and §13. Met.
 
 - [~] **T0-02 — Personal content intake** (OQ-006)
   - Supplied and logged: CR-001, CR-002, CR-003, CR-005, CR-010, CR-012. Partial: CR-004, CR-016.
@@ -41,9 +41,9 @@ Rules:
   - MVP page, post-MVP, or Home section only.
   - Done when: FR-015 confirmed or dropped; page entries in BUILD.md §4 updated.
 
-- [ ] **T0-07 — Approve deployment and tooling** (ADR-004, ADR-010)
-  - One-line approval of GitHub Actions, npm, ESLint + Prettier, pinned Node LTS.
-  - Done when: both ADRs marked Accepted.
+- [~] **T0-07 — Approve deployment and tooling** (ADR-004, ADR-010)
+  - GitHub Actions approved and live. npm and pinned Node 22 accepted. ESLint + Prettier still not installed.
+  - Done when: both ADRs marked Accepted. ADR-004 done; ADR-010 partially.
 
 - [x] **T0-08 — Local environment**
   - Local: Node 26.5.0, npm 11.17.0, git 2.56.0. Pinned: `.nvmrc` = `22`, `engines.node` = `>=22`.
@@ -92,14 +92,14 @@ Rules:
   - Fixed during the audit: the wordmark link carried `aria-label="Home"`, which broke `label-content-name-mismatch` (WCAG 2.5.3). The label is gone; the visible wordmark is the name.
   - Not done: no manual screen-reader pass (VoiceOver/NVDA).
 
-- [ ] **T2-04 — Metadata and structured data**
-  - Per-entry title, description, canonical, Open Graph, JSON-LD `Person` on Home. `robots.txt`, `sitemap.xml`.
-  - Done when: AC-012 passes on the production build.
+- [x] **T2-04 — Metadata and structured data**
+  - Per-entry title, description, canonical, Open Graph, Twitter card, JSON-LD `Person` on Home, shared 1200×630 `og.png`. `robots.txt` points at `sitemap.xml`; sitemap lists the five indexable pages and excludes 404.
+  - Done when: AC-012 passes on the production build. Verified on `https://reain2.github.io`.
 
 - [~] **T2-05 — Not-found page**
   - `404.html` exists with the site shell and a link home.
   - Verified on a plain static server (`npm run audit` serves `dist/` directly): an unknown path returns status 404 and the not-found markup. `vite preview` falls back to `index.html`, so it must not be used to check this.
-  - Not done: not yet checked on GitHub Pages itself.
+  - Verified on GitHub Pages: `https://reain2.github.io/nope` returns status 404 with the not-found markup.
 
 ## Phase 3 — Design
 
@@ -159,13 +159,13 @@ Each page task is done when: content comes from the content layer, the page matc
 
 ## Phase 6 — Deploy
 
-- [ ] **T6-01 — Pages settings and workflow**
-  - Source: GitHub Actions. `deploy.yml` per BUILD.md §13.
-  - Done when: a run from the default branch deploys successfully.
+- [x] **T6-01 — Pages settings and workflow**
+  - Source: GitHub Actions (`build_type=workflow`). `deploy.yml` builds, checks sizes, uploads `dist/` and deploys.
+  - Done when: a run from the default branch deploys successfully. Met: run 42354153483 deployed `main`.
 
-- [ ] **T6-02 — First deploy and checklist**
-  - Run the nine-item post-deploy checklist in BUILD.md §13.
-  - Done when: every item checked on the live address.
+- [~] **T6-02 — First deploy and checklist**
+  - Checked on the live address: all five pages 200, unknown path 404, font and CSS load, favicon/og/sitemap/robots 200, canonical and JSON-LD present, prerendered markup in the HTML, live audit clean (30 width runs, 12 axe runs).
+  - Not checked: `mailto:` opens a client (needs a human), CWV/Lighthouse numbers, placeholder gate (still expected to fail).
 
 - [ ] **T6-03 — Release tag and rollback note**
   - Tag the release; confirm a revert redeploys the previous state.
