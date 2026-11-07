@@ -1,7 +1,10 @@
 # Personal Portfolio Website
 
-Scaffold built and verified locally. **No real content yet** — every page renders
-`[USER INPUT REQUIRED]` where owner-supplied text belongs.
+**Live:** https://reain2.github.io — deployed from `main` through GitHub Actions.
+
+Partially filled. Name, tagline, email, about, education, skills and interests are real and
+logged in DESIGN.md. Projects, achievements, work experience, certifications, social links,
+résumé, blog posts and photos are still `[USER INPUT REQUIRED]`.
 
 A multi-page, English-language personal portfolio for a Software Engineer + Creative Technologist.
 React.js + Vite + JavaScript, plain CSS, build-time prerender, free ReactBits as a complement,
@@ -33,19 +36,19 @@ Repository base path: `VITE_BASE=/portfolio/ npm run build`. Omit it for `<usern
 
 | Page | File | State |
 |---|---|---|
-| Home | `index.html` | Structure + placeholders |
-| About | `about.html` | Structure + placeholders |
-| Experience | `experience.html` | Four empty groups |
-| Contact | `contact.html` | No email, no links |
-| Writing | `blog.html` | No posts |
-| Not found | `404.html` | Complete (its copy is generic, not personal) |
+| Home | `index.html` | Headline, intro, what I do, currently. Selected work still placeholder |
+| About | `about.html` | Complete: background, approach, interests |
+| Experience | `experience.html` | Education filled; work, achievements, certifications placeholder |
+| Contact | `contact.html` | Email live; profiles placeholder |
+| Writing | `blog.html` | No posts — placeholder |
+| Not found | `404.html` | Complete |
 
-Missing on purpose, blocked on decisions:
+Missing on purpose:
 
-- Canonical URLs, `robots.txt`, `sitemap.xml`, JSON-LD — need the real domain (OQ-005, OQ-008).
 - Résumé download — no file (OQ-004).
-- Deploy workflow — ADR-004 unapproved.
+- Project and blog pages — owner asked for placeholders until the site is finished.
 - Images — no assets, no rights confirmed (OQ-010).
+- Root `LICENSE` — the licence is the owner's choice.
 
 ## Open decisions
 
