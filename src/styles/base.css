@@ -166,6 +166,57 @@ main {
   padding-block: var(--space-6) var(--space-5);
 }
 
+/* Landing hero: swarm canvas sits behind the text, never above it. */
+.hero--landing {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__fx {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero__body {
+  position: relative;
+  z-index: 1;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  color: var(--ink-on-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.button:focus-visible {
+  outline-color: var(--ink-on-accent);
+}
+
+.button--line {
+  background: transparent;
+  color: inherit;
+}
+
 .lede {
   margin-top: var(--space-3);
   font-size: var(--step-1);
@@ -188,6 +239,12 @@ main {
 
 .section--support a {
   text-decoration-color: var(--ink-on-support);
+}
+
+/* mailto links stand alone, so give them a full tap target. */
+.section--support p > a {
+  display: inline-block;
+  padding-block: 0.3rem;
 }
 
 .stack > * + * {

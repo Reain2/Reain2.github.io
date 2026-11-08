@@ -18,13 +18,14 @@ export const home = {
   headline: 'Tech Enthusiast, Exploring New Things',
   intro:
     'I am curious about how things work, so I keep trying new things. When something looks like a challenge, I take it on.',
+  // Landing order: what I do, currently, then the selected-work placeholder last.
   sections: [
-    { title: 'Selected work', body: PLACEHOLDER },
     { title: 'What I do', body: 'Photography, video editing and trying out new tools, with a close interest in AI and where it is going.' },
     {
       title: 'Currently',
       body: '12th grade at Cinta Kasih Tzu Chi Vocational School, learning by trying things out.',
     },
+    { title: 'Selected work', body: PLACEHOLDER },
   ],
 }
 

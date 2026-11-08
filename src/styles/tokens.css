@@ -5,6 +5,7 @@
   --accent: #FFCFCA;
   --ink-on-ground: #FFFFFF;
   --ink-on-support: #14201A;
+  --ink-on-accent: #14201A;
 
   --rule: color-mix(in srgb, var(--accent) 55%, transparent);
   --rule-strong: color-mix(in srgb, var(--accent) 100%, transparent);
