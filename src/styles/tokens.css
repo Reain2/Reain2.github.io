@@ -9,6 +9,9 @@
   --ink-on-accent: #000000;
 
   --support-field: linear-gradient(135deg, var(--support), var(--support-deep));
+  /* Page lift: brightest at the top, settles into the ground. Measured, see DESIGN.md §2. */
+  --ground-lift: #0E1834;
+  --ground-field: linear-gradient(180deg, var(--ground-lift) 0, var(--ground) 820px);
 
   --rule: color-mix(in srgb, var(--accent) 55%, transparent);
   --rule-strong: color-mix(in srgb, var(--accent) 100%, transparent);
