@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Rain">
-  <rect width="32" height="32" fill="#217F21" />
-  <rect x="3" y="3" width="26" height="26" fill="none" stroke="#FFCFCA" stroke-width="2" />
-  <text x="16" y="23" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="19" font-weight="700" fill="#FFFFFF">R</text>
+  <rect width="32" height="32" fill="#0B0D12" />
+  <rect x="3" y="3" width="26" height="26" fill="none" stroke="#FF8C42" stroke-width="2" />
+  <text x="16" y="23" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="19" font-weight="700" fill="#F5F7FA">R</text>
 </svg>

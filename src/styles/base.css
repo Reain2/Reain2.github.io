@@ -106,7 +106,7 @@ ul {
   left: -9999px;
   top: 0;
   background: var(--accent);
-  color: var(--ink-on-support);
+  color: var(--ink-on-accent);
   padding: var(--space-1) var(--space-2);
 }
 
@@ -209,7 +209,7 @@ main {
 }
 
 .button:focus-visible {
-  outline-color: var(--ink-on-accent);
+  outline-color: var(--ink-on-ground);
 }
 
 .button--line {
@@ -230,7 +230,7 @@ main {
 }
 
 .section--support {
-  background: var(--support);
+  background: var(--support-field);
   color: var(--ink-on-support);
   padding-inline: var(--gutter);
   margin-inline: calc(var(--gutter) * -1);

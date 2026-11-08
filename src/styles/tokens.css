@@ -1,11 +1,14 @@
 /* Tokens only. No raw colour value may appear outside this file. */
 :root {
-  --ground: #217F21;
-  --support: #01B36C;
-  --accent: #FFCFCA;
-  --ink-on-ground: #FFFFFF;
-  --ink-on-support: #14201A;
-  --ink-on-accent: #14201A;
+  --ground: #0B0D12;
+  --support: #1F51FF;
+  --support-deep: #0A2A8F;
+  --accent: #FF8C42;
+  --ink-on-ground: #F5F7FA;
+  --ink-on-support: #FFFFFF;
+  --ink-on-accent: #000000;
+
+  --support-field: linear-gradient(135deg, var(--support), var(--support-deep));
 
   --rule: color-mix(in srgb, var(--accent) 55%, transparent);
   --rule-strong: color-mix(in srgb, var(--accent) 100%, transparent);
