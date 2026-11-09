@@ -1,19 +1,21 @@
-/* RENANDO-inspired portfolio system. Values from AGENT/design.md. */
+/* Approved technical-lab / quiet-premium tokens. */
 :root {
   color-scheme: dark;
 
-  --ground: #090909;
-  --surface: #151212;
-  --accent: #EF4151;
+  --ground: #0B0D12;
+  --surface: #141821;
+  --accent: #FF8C42;
   --accent-ink: #000000;
-  --accent-muted: #FF8A94;
-  --border: #F2EFEB;
-  --ink: #F2EFEB;
-  --muted: #A09C9A;
-  --surface-deep: #30282A;
+  --accent-muted: #FFD0B2;
+  --support: #1F51FF;
+  --support-deep: #0A2A8F;
+  --border: #F5F7FA;
+  --ink: #F5F7FA;
+  --muted: #B9C0CC;
+  --surface-deep: #18203A;
 
-  --font-display: 'Anton', Impact, sans-serif;
-  --font-text: 'Manrope', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-text: 'Space Grotesk', system-ui, sans-serif;
 
   --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
   --step-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
@@ -26,12 +28,12 @@
   --space-3: 1.5rem;
   --space-4: 2rem;
   --space-5: 3rem;
-  --space-6: clamp(5rem, 10vw, 10rem);
+  --space-6: clamp(3.5rem, 7vw, 6rem);
 
-  --radius-pill: 50px;
+  --radius-pill: 4px;
   --measure: 62ch;
-  --page: 1760px;
-  --gutter: clamp(1rem, 2.2vw, 2rem);
+  --page: 1440px;
+  --gutter: clamp(1rem, 3vw, 3rem);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --duration-fast: 200ms;
   --duration-base: 400ms;

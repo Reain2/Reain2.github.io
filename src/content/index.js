@@ -16,7 +16,7 @@ export const site = {
 }
 
 export const home = {
-  headline: 'Tech Enthusiast, Exploring New Things',
+  headline: 'Curious by nature. Building by experiment.',
   intro:
     'I am curious about how things work, so I keep trying new things. When something looks like a challenge, I take it on.',
   // Landing order: what I do, currently, then selected work.
