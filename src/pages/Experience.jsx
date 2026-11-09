@@ -7,6 +7,7 @@ const groups = [
   { key: 'work', title: 'Experience and activities' },
   { key: 'achievements', title: 'Achievements and awards' },
   { key: 'certifications', title: 'Certifications' },
+  { key: 'skills', title: 'Skills' },
 ]
 
 export default function Experience() {

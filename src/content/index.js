@@ -19,7 +19,7 @@ export const home = {
   headline: 'Tech Enthusiast, Exploring New Things',
   intro:
     'I am curious about how things work, so I keep trying new things. When something looks like a challenge, I take it on.',
-  // Landing order: what I do, currently, then the selected-work placeholder last.
+  // Landing order: what I do, currently, then selected work.
   sections: [
     { title: 'What I do', body: 'Photography, video editing and trying out new tools, with a close interest in AI and where it is going.' },
     {
@@ -107,6 +107,26 @@ export const experience = {
       organisation: '',
       date: 'Score 890',
       body: 'English proficiency test score.',
+    },
+  ],
+  skills: [
+    {
+      title: 'Programming',
+      organisation: 'HTML · CSS · PHP · JavaScript',
+      date: '',
+      body: 'Web development and software fundamentals.',
+    },
+    {
+      title: 'Frameworks and tools',
+      organisation: 'Laravel · Vue.js · Visual Studio Code · Microsoft Office',
+      date: '',
+      body: 'Building, editing and supporting digital work.',
+    },
+    {
+      title: 'Working style',
+      organisation: 'Problem solving · Time management · Team collaboration',
+      date: '',
+      body: 'Practical, collaborative and focused on making systems work reliably.',
     },
   ],
 }
