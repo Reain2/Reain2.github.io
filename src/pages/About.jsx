@@ -7,7 +7,7 @@ export default function About() {
     <Layout current="about.html">
       <div className="page">
         <section className="hero">
-          <h1>About</h1>
+          <h1>About Rain</h1>
           <p className="lede">
             <Text value={about.intro} />
           </p>

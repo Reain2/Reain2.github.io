@@ -8,15 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
-const WIPES = {
-  up: 'linear-gradient(to top, #000 calc(var(--ac-wipe) * 140% - 40%), transparent calc(var(--ac-wipe) * 140%))',
-  down: 'linear-gradient(to bottom, #000 calc(var(--ac-wipe) * 140% - 40%), transparent calc(var(--ac-wipe) * 140%))',
-  left: 'linear-gradient(to left, #000 calc(var(--ac-wipe) * 140% - 40%), transparent calc(var(--ac-wipe) * 140%))',
-  right: 'linear-gradient(to right, #000 calc(var(--ac-wipe) * 140% - 40%), transparent calc(var(--ac-wipe) * 140%))',
-  center:
-    'radial-gradient(farthest-corner at 50% 50%, #000 calc(var(--ac-wipe) * 140% - 40%), transparent calc(var(--ac-wipe) * 140%))'
-};
-
 const AnimatedContent = ({
   children,
   container,
@@ -67,8 +58,6 @@ const AnimatedContent = ({
       const horizontal = direction === 'horizontal';
       const axis = horizontal ? 'x' : 'y';
       const sign = reverse ? -1 : 1;
-      const mask = WIPES[wipe];
-
       gsap.set(el, { visibility: 'visible' });
 
       if (reduce) {
@@ -104,16 +93,11 @@ const AnimatedContent = ({
         from.transformPerspective = 900;
         to.transformPerspective = 900;
       }
-      if (mask) {
-        gsap.set(targets, { maskImage: mask, webkitMaskImage: mask });
-        from['--ac-wipe'] = 0;
-        to['--ac-wipe'] = 1;
-      }
       if (stagger > 0) to.stagger = { each: stagger, from: staggerFrom };
 
       const settle = () => {
         if (scrub) return;
-        gsap.set(targets, { clearProps: mask ? 'filter,transform,maskImage,webkitMaskImage' : 'filter,transform' });
+        gsap.set(targets, { clearProps: 'filter,transform' });
       };
 
       const disappear = () => {
@@ -171,7 +155,6 @@ const AnimatedContent = ({
         onLeaveBack: once
           ? undefined
           : () => {
-              if (mask) gsap.set(targets, { maskImage: mask, webkitMaskImage: mask });
               tl.reverse();
             }
       });

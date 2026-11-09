@@ -7,7 +7,7 @@ export default function Blog() {
     <Layout current="blog.html">
       <div className="page">
         <section className="hero">
-          <h1>Writing</h1>
+          <h1>Notes</h1>
           <p className="lede">
             <Text value={blog.intro} />
           </p>

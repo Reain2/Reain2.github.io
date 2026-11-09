@@ -17,8 +17,9 @@ export default function Layout({ current, children }) {
       </a>
 
       <header className="site-header">
-        <a className="wordmark" href="index.html">
-          <Text value={site.name} />
+        <a className="wordmark" href="index.html" aria-label={`${site.name} — home`}>
+          <span aria-hidden="true">RAIN/</span>
+          <span className="sr-only"><Text value={site.name} /></span>
         </a>
         <nav className="site-nav" aria-label="Primary">
           <ul>
@@ -37,9 +38,7 @@ export default function Layout({ current, children }) {
 
       <footer className="site-footer">
         <div className="site-footer__top">
-          <p className="wordmark">
-            <Text value={site.name} />
-          </p>
+          <p className="wordmark"><span aria-hidden="true">RAIN/</span></p>
           <ul>
             {site.links.length === 0 && (
               <li>

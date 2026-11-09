@@ -14,7 +14,8 @@ export default function Experience() {
     <Layout current="experience.html">
       <div className="page">
         <section className="hero">
-          <h1>Experience, education and achievements</h1>
+          <h1>Experience</h1>
+          <p className="lede">Education, activities and milestones so far.</p>
         </section>
 
         {groups.map((group) => {

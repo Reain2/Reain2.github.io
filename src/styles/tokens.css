@@ -1,37 +1,39 @@
-/* Tokens only. No raw colour value may appear outside this file. */
+/* RENANDO-inspired portfolio system. Values from AGENT/design.md. */
 :root {
-  --ground: #0B0D12;
-  --support: #1F51FF;
-  --support-deep: #0A2A8F;
-  --accent: #FF8C42;
-  --ink-on-ground: #F5F7FA;
-  --ink-on-support: #FFFFFF;
-  --ink-on-accent: #000000;
+  color-scheme: dark;
 
-  --support-field: linear-gradient(135deg, var(--support), var(--support-deep));
-  /* Page lift: brightest at the top, settles into the ground. Measured, see DESIGN.md §2. */
-  --ground-lift: #0E1834;
-  --ground-field: linear-gradient(180deg, var(--ground-lift) 0, var(--ground) 820px);
+  --ground: #090909;
+  --surface: #151212;
+  --accent: #EF4151;
+  --accent-ink: #000000;
+  --accent-muted: #FF8A94;
+  --border: #F2EFEB;
+  --ink: #F2EFEB;
+  --muted: #A09C9A;
+  --surface-deep: #30282A;
 
-  --rule: color-mix(in srgb, var(--accent) 55%, transparent);
-  --rule-strong: color-mix(in srgb, var(--accent) 100%, transparent);
+  --font-display: 'Anton', Impact, sans-serif;
+  --font-text: 'Manrope', system-ui, sans-serif;
 
-  --font: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
-
-  --step--1: clamp(0.85rem, 0.82rem + 0.15vw, 0.95rem);
-  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
-  --step-1: clamp(1.25rem, 1.1rem + 0.7vw, 1.6rem);
-  --step-2: clamp(1.6rem, 1.3rem + 1.4vw, 2.4rem);
-  --step-3: clamp(2.4rem, 1.6rem + 4vw, 4.8rem);
+  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
+  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
+  --step-display: clamp(3.25rem, 7vw, 8rem);
 
   --space-1: 0.5rem;
-  --space-2: 0.875rem;
+  --space-2: 1rem;
   --space-3: 1.5rem;
-  --space-4: 2.5rem;
-  --space-5: 4rem;
-  --space-6: clamp(4rem, 2rem + 8vw, 8rem);
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: clamp(5rem, 10vw, 10rem);
 
+  --radius-pill: 50px;
   --measure: 62ch;
-  --page: 1100px;
-  --gutter: clamp(1.25rem, 0.5rem + 3vw, 3rem);
+  --page: 1760px;
+  --gutter: clamp(1rem, 2.2vw, 2rem);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-slow: 700ms;
 }
