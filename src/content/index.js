@@ -6,12 +6,13 @@ export const PLACEHOLDER = '[USER INPUT REQUIRED]'
 export const site = {
   name: 'Samuel Rain Gunawan',
   shortName: 'Rain',
-  tagline: 'Tech enthusiast, exploring new things',
+  tagline: 'Software engineering graduate, exploring new things',
   email: 'samuelsofficials28@gmail.com',
   // OQ-009: shown as plain text, no obfuscation. Owner can change this.
   emailObfuscated: false,
-  // CR-011: still missing. Placeholder until the owner supplies URLs.
-  links: [],
+  links: [
+    { label: 'GitHub', href: 'https://github.com/Reain2' },
+  ],
 }
 
 export const home = {
@@ -23,23 +24,26 @@ export const home = {
     { title: 'What I do', body: 'Photography, video editing and trying out new tools, with a close interest in AI and where it is going.' },
     {
       title: 'Currently',
-      body: '12th grade at Cinta Kasih Tzu Chi Vocational School, learning by trying things out.',
+      body: 'Graduated in 2027 from Cinta Kasih Tzu Chi Vocational School, majoring in Software Engineering.',
     },
-    { title: 'Selected work', body: PLACEHOLDER },
+    {
+      title: 'Selected work',
+      body: 'Gravity Slash is a hand-sensor slash game inspired by Fruit Ninja. It includes math questions, three lives, and supports slicing with up to two hands.',
+    },
   ],
 }
 
 export const about = {
   intro:
-    'A student who likes figuring things out by doing them, with photography, video and new technology as the usual starting points.',
+    'A software engineering graduate who likes figuring things out by doing them, with photography, video and new technology as the usual starting points.',
   story: [
     {
       heading: 'Background',
-      body: 'Kindergarten through junior high school at Santo Leo 2. Now in 12th grade at Cinta Kasih Tzu Chi Vocational School.',
+      body: 'Kindergarten through junior high school at Santo Leo 2. Graduated in 2027 from Cinta Kasih Tzu Chi Vocational School, majoring in Software Engineering.',
     },
     {
       heading: 'Approach',
-      body: 'Do my best to make everything work. If something does not work the first time, I keep at it until it does.',
+      body: 'I do my best to make everything work. If something does not work the first time, I keep at it until it does.'
     },
     {
       heading: 'Interests',
@@ -53,8 +57,8 @@ export const experience = {
     {
       title: 'Cinta Kasih Tzu Chi Vocational School',
       organisation: '',
-      date: '12th grade, in progress',
-      body: 'Vocational high school.',
+      date: 'Graduated 2027 · Software Engineering',
+      body: 'Vocational high school graduate.'
     },
     {
       title: 'Santo Leo 2',
@@ -63,13 +67,52 @@ export const experience = {
       body: 'Kindergarten through junior high school.',
     },
   ],
-  work: [],
-  achievements: [],
-  certifications: [],
+  work: [
+    {
+      title: 'General Support Intern',
+      organisation: 'PT ZENBU HEAD OFFICE',
+      date: 'January–March 2026',
+      body: 'Prepared for IT support work focused on maintaining technology stability and user comfort during daily operations.',
+    },
+    {
+      title: 'Humanitarian Production Intern',
+      organisation: 'PT Daai TV',
+      date: 'July–September 2026',
+      body: 'Three-month internship in humanitarian production, supporting production work and technical coordination.'
+    },
+  ],
+  achievements: [
+    {
+      title: 'LKS Web Development — West Jakarta',
+      organisation: '',
+      date: 'First place',
+      body: 'Won first place in an offline web development competition without access to Wi-Fi or online references.',
+    },
+    {
+      title: 'Technofest — Agentic AI',
+      organisation: 'Universitas Bunda Mulia',
+      date: 'Second place · 2026',
+      body: 'Placed second in the Agentic AI category under the theme Reimagining the Future of Learning.',
+    },
+    {
+      title: 'BEEFEST',
+      organisation: '',
+      date: 'Top 10 finalist · 2024',
+      body: 'Selected as one of the top 10 finalists nationwide.',
+    },
+  ],
+  certifications: [
+    {
+      title: 'TOEIC',
+      organisation: '',
+      date: 'Score 890',
+      body: 'English proficiency test score.',
+    },
+  ],
 }
 
 export const contact = {
-  note: PLACEHOLDER,
+  note: 'Open to conversations about technology, photography, and creative projects.',
 }
 
 export const blog = {
