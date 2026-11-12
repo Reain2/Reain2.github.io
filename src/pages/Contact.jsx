@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <Layout current="contact.html">
       <div className="page">
-        <section className="hero">
+        <section className="hero page-hero">
           <h1>Contact</h1>
           <p className="lede">
             <Text value={contact.note} />

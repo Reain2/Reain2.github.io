@@ -1,41 +1,37 @@
-/* Approved technical-lab / quiet-premium tokens. */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  --ground: #0B0D12;
-  --surface: #141821;
-  --accent: #FF8C42;
-  --accent-ink: #000000;
-  --accent-muted: #FFD0B2;
-  --support: #1F51FF;
-  --support-deep: #0A2A8F;
-  --border: #F5F7FA;
-  --ink: #F5F7FA;
-  --muted: #B9C0CC;
-  --surface-deep: #18203A;
+  --ground: #f3f0e9;
+  --surface: #fffdf8;
+  --surface-strong: #101318;
+  --ink: #101318;
+  --muted: #52606d;
+  --border: #c8c9c5;
+  --accent: #1d4ed8;
+  --accent-soft: #dbe7ff;
+  --on-accent: #ffffff;
 
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
   --font-text: 'Space Grotesk', system-ui, sans-serif;
 
-  --step-small: clamp(0.8125rem, 0.79rem + 0.1vw, 0.875rem);
+  --step-small: clamp(0.75rem, 0.72rem + 0.1vw, 0.875rem);
   --step-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
-  --step-lead: clamp(1.25rem, 1.1rem + 0.7vw, 1.625rem);
-  --step-head: clamp(2rem, 1.3rem + 3.2vw, 4rem);
-  --step-display: clamp(3.25rem, 7vw, 8rem);
+  --step-lead: clamp(1.15rem, 1.05rem + 0.5vw, 1.45rem);
+  --step-head: clamp(1.75rem, 1.4rem + 1.8vw, 3.2rem);
+  --step-display: clamp(3.25rem, 7vw, 7rem);
 
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2rem;
   --space-5: 3rem;
-  --space-6: clamp(3.5rem, 7vw, 6rem);
+  --space-6: clamp(4rem, 9vw, 8rem);
 
-  --radius-pill: 4px;
+  --radius-sm: 3px;
   --measure: 62ch;
-  --page: 1440px;
-  --gutter: clamp(1rem, 3vw, 3rem);
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --duration-fast: 200ms;
-  --duration-base: 400ms;
-  --duration-slow: 700ms;
+  --page: 1240px;
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast: 160ms;
+  --duration-base: 260ms;
 }

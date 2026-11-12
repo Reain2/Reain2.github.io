@@ -8,7 +8,7 @@ import { join, extname } from 'node:path'
 
 const PORT = 4455
 const WIDTHS = [320, 390, 768, 1024, 1440]
-const PAGES = ['/', '/about.html', '/experience.html', '/contact.html', '/blog.html', '/404.html']
+const PAGES = ['/', '/about.html', '/experience.html', '/contact.html', '/404.html']
 
 const types = {
   '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript',

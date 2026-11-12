@@ -14,7 +14,7 @@ export default function Experience() {
   return (
     <Layout current="experience.html">
       <div className="page">
-        <section className="hero">
+        <section className="hero page-hero">
           <h1>Experience</h1>
           <p className="lede">Education, activities and milestones so far.</p>
         </section>

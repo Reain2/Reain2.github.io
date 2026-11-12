@@ -11,7 +11,6 @@ export default defineConfig({
         about: 'about.html',
         experience: 'experience.html',
         contact: 'contact.html',
-        blog: 'blog.html',
         notFound: '404.html',
       },
     },

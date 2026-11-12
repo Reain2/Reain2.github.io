@@ -29,6 +29,7 @@ export const home = {
     {
       title: 'Selected work',
       body: 'Gravity Slash is a hand-sensor slash game inspired by Fruit Ninja. It includes math questions, three lives, and supports slicing with up to two hands.',
+      href: 'https://github.com/Reain2/Gravity-Slash',
     },
   ],
 }
@@ -133,11 +134,6 @@ export const experience = {
 
 export const contact = {
   note: 'Open to conversations about technology, photography, and creative projects.',
-}
-
-export const blog = {
-  intro: PLACEHOLDER,
-  posts: [],
 }
 
 export const notFound = {

@@ -5,7 +5,6 @@ const pages = [
   { href: 'index.html', label: 'Home' },
   { href: 'about.html', label: 'About' },
   { href: 'experience.html', label: 'Experience' },
-  { href: 'blog.html', label: 'Writing' },
   { href: 'contact.html', label: 'Contact' },
 ]
 
